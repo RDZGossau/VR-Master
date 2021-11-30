@@ -1,13 +1,14 @@
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.clearScreen()
-    basic.showString("* PAUSE *")
     soundExpression.yawn.play()
-    for (let MicroBitNr = 0; MicroBitNr <= 12; MicroBitNr++) {
-        basic.showNumber(MicroBitNr)
-        radio.setGroup(MicroBitNr)
+    basic.showString("* PAUSE")
+    for (let Index = 0; Index <= 12; Index++) {
+        basic.showNumber(Index)
+        radio.setGroup(Index)
         radio.sendString("PAUSE")
         basic.pause(500)
     }
+    radio.setGroup(MicroBitNr)
 })
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
@@ -58,4 +59,5 @@ input.onButtonPressed(Button.B, function () {
 let MicroBitNr = 0
 MicroBitNr = 1
 basic.showNumber(MicroBitNr)
+radio.setGroup(MicroBitNr)
 basic.pause(5000)
