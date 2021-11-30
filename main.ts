@@ -56,6 +56,6 @@ input.onButtonPressed(Button.B, function () {
         `)
 })
 let MicroBitNr = 0
-MicroBitNr = 0
+MicroBitNr = 1
 basic.showNumber(MicroBitNr)
 basic.pause(5000)
